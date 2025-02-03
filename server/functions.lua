@@ -172,5 +172,5 @@ end
 
 xPlayer.Functions.DiscordSendMsg = function(name, message)    
     if message == nil or message == '' then return FALSE end
-    PerformHttpRequest('https://discord.com/api/webhooks/1331317019374780456/rojJClbugM-vZoINFiY6snLkwLnLi25l7wEel8H0RPwIk6TXzQBFvN9_GtjeZUlGC0fx', function(err, text, headers) end, 'POST', json.encode({username = name, content = message}), { ['Content-Type'] = 'application/json' })
+    PerformHttpRequest('WEBHOOK', function(err, text, headers) end, 'POST', json.encode({username = name, content = message}), { ['Content-Type'] = 'application/json' })
 end
